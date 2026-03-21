@@ -1,0 +1,279 @@
+:root {
+  --primary: #00756f;
+  --primary-dark: #00756f;
+  --accent: #f2c14e;
+  --surface: #ffffff;
+  --surface-alt: #f5f7fb;
+  --text: #000;
+  --muted: #5f6b7a;
+  --border: #d9e0e8;
+  --shadow: 0 10px 28px rgba(16, 24, 40, 0.08);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Source Sans 3", Arial, sans-serif;
+  color: var(--text);
+  background: #eef2f6;
+  line-height: 1.65;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+header,
+main,
+footer {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+header {
+  margin-top: 1.75rem;
+  border-radius: var(--radius) var(--radius) 0 0;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+#course-title {
+  display: block;
+  text-align: center;
+  background: var(--primary);
+  color: #fff;
+  padding: 1.25rem 1rem;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: #23262b;
+}
+
+nav a {
+  flex: 1 1 160px;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 600;
+  transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: var(--accent);
+  color: #111;
+  transform: translateY(-2px);
+}
+
+main {
+  padding: 2rem 0;
+}
+
+main h1 {
+  margin: 0 0 1.5rem;
+  text-align: center;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--primary-dark);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.25rem;
+}
+
+main h1 {
+  grid-column: 1 / -1;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.card h2 {
+  margin: 0;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  background: var(--primary);
+  color: #fff;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.35rem;
+}
+
+.about-grid {
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.intro-text p,
+.location-content p {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.profile-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.profile-wrap img {
+  width: min(100%, 240px);
+  border-radius: 14px;
+  border: 4px solid #e4ecf3;
+}
+
+.location-block {
+  grid-column: 1 / -1;
+  padding-top: 0.5rem;
+}
+
+.location-block h3 {
+  margin: 0 0 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+}
+
+.location-content {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+figure img {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: #fff;
+}
+
+figcaption {
+  margin-top: 0.75rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
+.resources {
+  padding: 1.75rem 1.75rem 2rem;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.resources ul {
+  margin: 0;
+  padding-left: 1.4rem;
+}
+
+.resources li {
+  margin-bottom: 0.85rem;
+  font-size: 1.1rem;
+}
+
+.resources a {
+  color: #1b4dcc;
+}
+
+.resources a:hover,
+.resources a:focus-visible {
+  text-decoration: none;
+}
+
+footer {
+  margin-bottom: 1.75rem;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 0 0 var(--radius) var(--radius);
+  box-shadow: var(--shadow);
+}
+
+footer p {
+  margin: 0.35rem 0;
+  font-size: 1.05rem;
+}
+
+#lastModified {
+  color: #ffea8a;
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+
+  .about-grid,
+  .location-content {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-wrap {
+    order: -1;
+  }
+
+  nav a {
+    flex-basis: 50%;
+  }
+}
+
+@media (max-width: 560px) {
+  body {
+    line-height: 1.55;
+  }
+
+  header,
+  main,
+  footer {
+    width: min(100% - 1rem, 1120px);
+  }
+
+  nav a {
+    flex-basis: 100%;
+  }
+
+  .card h2 {
+    font-size: 1.2rem;
+  }
+
+  .about-grid,
+  .resources {
+    padding: 1rem;
+  }
+
+  .location-block h3 {
+    font-size: 1.45rem;
+  }
+}

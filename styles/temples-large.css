@@ -1,0 +1,30 @@
+@media only screen and (min-width: 48rem) {
+    #menu-button {
+        display: none;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #nav-menu {
+        display: flex;
+        position: static;
+        width: auto;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 0;
+        background: transparent;
+    }
+
+    #nav-menu a {
+        padding: 0.5rem 1rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
