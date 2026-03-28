@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place Nigeria</title>
+  <meta name="description" content="Nigeria is a vibrant West African country known for its rich culture, diverse languages, growing economy, and dynamic cities like Lagos and Abuja.">
+  <meta name="author" content="Lyon Iorngulum">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/place.css">
+  <script src="scripts/place.js" defer></script>
+</head>
+<body>
+
+  <header class="header">
+    <h1>Nigeria</h1>
+  </header>
+
+
+<main>
+  <section class="hero">
+    <picture>
+      <source srcset="images/nigerian_landscape.webp" media="(min-width: 768px)">
+      <img src="images/nigerian_landscape.webp" alt="A beautiful view representing Nigeria">
+    </picture>
+
+    <div class="card data-card">
+      <h2>Data</h2>
+      <ul>
+        <li><strong>Area:</strong> 923,768 sq km</li>
+        <li><strong>Population:</strong> 223,804,632</li>
+        <li><strong>Capital:</strong> Abuja</li>
+        <li><strong>Languages:</strong> English, Hausa, Yoruba, Igbo</li>
+        <li><strong>Currency:</strong> Naira (₦)</li>
+        <li><strong>Time Zone:</strong> UTC+1</li>
+        <li><strong>Calling Code:</strong> +234</li>
+        <li><strong>Internet TLD:</strong> .ng</li>
+      </ul>
+    </div>
+
+<div class="card weather-card">
+  <h2>Weather</h2>
+
+  <p><strong>Temperature:</strong> <span id="temp">32</span> °C</p>
+  <p><strong>Conditions:</strong> Sunny</p>
+  <p><strong>Wind:</strong> <span id="wind">8</span> km/h</p>
+  <p><strong>Wind Chill:</strong> <span id="chill"></span></p>
+</div>
+  </section>
+</main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> 🌸 Lyon Iorngulum 🌸 Nigeria</p>
+    <p>Last Modification: <span id="modified"></span></p>
+  </footer>
+
+</body>
+</html>
