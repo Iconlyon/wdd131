@@ -80,25 +80,21 @@ nav a:focus-visible {
   transform: translateY(-2px);
 }
 
+/* ✅ MERGED MAIN RULE */
 main {
   padding: 2rem 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.25rem;
 }
 
+/* ✅ MERGED MAIN H1 RULE */
 main h1 {
   margin: 0 0 1.5rem;
   text-align: center;
   font-family: "Montserrat", Arial, sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
   color: var(--primary-dark);
-}
-
-main {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1.25rem;
-}
-
-main h1 {
   grid-column: 1 / -1;
 }
 
