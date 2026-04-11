@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form</title>
+  <meta name="description" content="Product review form project for WDD131 demonstrating form design principles, responsive layout, and JavaScript-driven interactivity.">
+  <meta name="author" content="Lyon Iorngulum">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <h1>Product Review Form</h1>
+      <p>Share your experience with one of our products.</p>
+    </header>
+
+    <main>
+       
+      <form class="review-form" method="get" action="review.html">
+         <h1>Product Review Form</h1>
+        <div class="form-group">
+          <label for="productName">Product Name</label>
+          <select id="productName" name="productName" required>
+            <option value="" disabled selected>Select a Product ...</option>
+          </select>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Overall Rating</legend>
+          <div class="rating-group">
+            <label for="rating1" class="rating-option">
+              <input type="radio" id="rating1" name="rating" value="1" required>
+              <span>☆</span>
+              <small>1</small>
+            </label>
+
+            <label for="rating2" class="rating-option">
+              <input type="radio" id="rating2" name="rating" value="2" required>
+              <span>☆☆</span>
+              <small>2</small>
+            </label>
+
+            <label for="rating3" class="rating-option">
+              <input type="radio" id="rating3" name="rating" value="3" required>
+              <span>☆☆☆</span>
+              <small>3</small>
+            </label>
+
+            <label for="rating4" class="rating-option">
+              <input type="radio" id="rating4" name="rating" value="4" required>
+              <span>☆☆☆☆</span>
+              <small>4</small>
+            </label>
+
+            <label for="rating5" class="rating-option">
+              <input type="radio" id="rating5" name="rating" value="5" required>
+              <span>☆☆☆☆☆</span>
+              <small>5</small>
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="installDate">Date of Installation</label>
+          <input type="date" id="installDate" name="installDate" required>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Useful Features <span>(Check all that apply)</span></legend>
+
+          <div class="checkbox-group">
+            <label for="durability">
+              <input type="checkbox" id="durability" name="features" value="Durability">
+              Durability
+            </label>
+
+            <label for="easeOfUse">
+              <input type="checkbox" id="easeOfUse" name="features" value="Ease of Use">
+              Ease of Use
+            </label>
+
+            <label for="performance">
+              <input type="checkbox" id="performance" name="features" value="Performance">
+              Performance
+            </label>
+
+            <label for="design">
+              <input type="checkbox" id="design" name="features" value="Design">
+              Design
+            </label>
+          </div>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="writtenReview">Written Review <span>(Optional)</span></label>
+          <textarea id="writtenReview" name="writtenReview" rows="5" placeholder="Write your review here..."></textarea>
+        </div>
+
+        <div class="form-group">
+          <label for="userName">Your Name <span>(Optional)</span></label>
+          <input type="text" id="userName" name="userName" placeholder="Enter your name">
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="Post Review" class="submit-button">
+        </div>
+      </form>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> | Lyon Iorngulum| Nigeria</p>
+      <p id="lastModified"></p>
+    </footer>
+  </div>
+</body>
+</html>
